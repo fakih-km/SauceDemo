@@ -26,20 +26,20 @@ public class LoginPage {
 
     //WebElements
     @FindBy(id = "user-name")
-    WebElement usernameInputText;
+    WebElement usernameInput;
     @FindBy(id = "password")
-    WebElement passwordInputText;
+    WebElement passwordInput;
     @FindBy(id = "login-button")
     WebElement loginButton;
 
     public void inputTextOnUsername(String username) {
         Helper.logEvent("Input text on username field");
-        usernameInputText.sendKeys(username);
+        usernameInput.sendKeys(username);
     }
 
     public void inputTextOnPassword(String password) {
         Helper.logEvent("Input text on password field");
-        passwordInputText.sendKeys(password);
+        passwordInput.sendKeys(password);
     }
 
     public void clickLoginButton() {
