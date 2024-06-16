@@ -29,7 +29,7 @@ public class LoginPage {
     WebElement usernameInputText;
     @FindBy(id = "password")
     WebElement passwordInputText;
-    @FindBy(id = "login-button")
+    @FindBy(id = "login-button1")
     WebElement loginButton;
 
     public void inputTextOnUsername(String username) {
