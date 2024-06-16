@@ -52,3 +52,5 @@ Thumbs.db
 
 # QA file
 TestNGRunner.java
+SauceDemoCucumber/reports/SauceDemoTestNGReport.json
+SauceDemoCucumber/reports/SauceDemoTestNGReport.html
