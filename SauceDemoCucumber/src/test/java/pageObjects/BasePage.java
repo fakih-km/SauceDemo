@@ -110,6 +110,18 @@ public class BasePage {
     }
 
     /**
+     * Hard Assert Url Text By DataTable, Result must be Equals
+     *
+     * @param dataTable -> DataTable from Gherkin
+     */
+    public void assertUrlWithDataTable(DataTable dataTable) {
+        actTxt = driver.getCurrentUrl();
+        rlstExpTxt = fuc.getExpectedTextByDataTable(dataTable);
+        expTxt = rlstExpTxt.get(0);
+        fuc.assertEquals(actTxt, expTxt);
+    }
+
+    /**
      * Hard Assert Element Text By String, Result must be Equals
      *
      * @param element -> Element that we want to get text from

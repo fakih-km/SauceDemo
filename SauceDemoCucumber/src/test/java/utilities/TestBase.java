@@ -82,7 +82,7 @@ public class TestBase {
                     break;
             }
 
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(8));
         driver.manage().window().maximize();
         driver.manage().deleteAllCookies();
         driver.get(urlStaging);

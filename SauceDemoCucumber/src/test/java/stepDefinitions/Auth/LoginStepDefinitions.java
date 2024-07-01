@@ -1,13 +1,14 @@
 package stepDefinitions.Auth;
 
+import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
 import pageObjects.PageObjectManager;
-import pageObjects.LoginPage.LoginPage;
+import pageObjects.Auth.LoginPage;
 import utilities.TestContextSetup;
 
 public class LoginStepDefinitions {
     TestContextSetup tcs;
-    public PageObjectManager pageObjectManager;
     public LoginPage lp;
 
     //	Constructor
@@ -30,4 +31,15 @@ public class LoginStepDefinitions {
     public void user_input_password(String password) {
         lp.inputTextOnPassword(password);
     }
+
+    @Then("User verify title page")
+    public void user_verify_title_page(DataTable dataTable) {
+        lp.verifyTitlePage(dataTable);
+    }
+
+    @Then("User verify url")
+    public void user_verify_url(DataTable dataTable) {
+        lp.verifyUrl(dataTable);
+    }
+
 }
